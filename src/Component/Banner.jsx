@@ -30,7 +30,7 @@ const Banner = () => {
         Connect with neighbors to master guitar, learn coding, practice yoga, or share your own expertise.
       </p>
 
-      <Link className="btn  gap-2 mt-4 p-5 bg-[#0D9488] text-white sm:text-lg font-semibold rounded-full hover:bg-[#0F766E] transition border-2 border-[#0D9488]">
+      <Link to={'/skills'} className="btn  gap-2 mt-4 p-5 bg-[#0D9488] text-white sm:text-lg font-semibold rounded-full hover:bg-[#0F766E] transition border-2 border-[#0D9488]">
         Explore Skills <FaArrowRightLong />
       </Link>
     </div>

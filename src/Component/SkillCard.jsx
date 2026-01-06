@@ -3,9 +3,9 @@ import { FaStar,FaRegUserCircle  } from "react-icons/fa";
 import { Link } from 'react-router';
 const SkillCard = ({skill}) => {
     console.log(skill)
-    const {skillName, providerName, price, rating, description, image} = skill
+    const {skillName, providerName, price, rating, description, image, skillId} = skill
     return (
-        <div className='w-[350px] shadow-lg rounded-lg scale-90 md:scale-100'>
+        <div className='w-[350px] shadow-lg rounded-lg scale-90 md:scale-100 hover:scale-105 transition ease-in-out'>
             <div
                 className="h-[250px] rounded-t-lg bg-cover bg-center flex justify-end p-4"
                 style={{
@@ -28,7 +28,7 @@ const SkillCard = ({skill}) => {
                 <div className='mt-5 flex justify-between items-center'>
                     <p className='flex gap-1 font-semibold text-[16px] items-center text-[#001931]'><FaRegUserCircle /> {providerName}</p>
 
-                    <Link className='text-[#0D9488] font-semibold hover:underline'>View Details</Link>
+                    <Link to={`/skillDetails/${skillId}`} onClick={() => window.scrollTo(0, 0)} className='text-[#0D9488] font-semibold hover:underline'>View Details</Link>
                 </div>
             </div>
 
