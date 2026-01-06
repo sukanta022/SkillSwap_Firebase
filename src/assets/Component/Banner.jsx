@@ -13,7 +13,7 @@ const Banner = () => {
     `
   }}
 >
-  <div className="space-y-4 w-11/12 sm:w-10/12 mx-auto flex flex-col items-start">
+  <div className="space-y-4 w-11/12 sm:w-10/12 mx-auto flex flex-col items-start animate__animated animate__lightSpeedInLeft">
     
     <div className="text-[#5EEAD4] flex items-center gap-2 rounded-lg bg-[#14B8A6]/20 px-3 py-1 border border-[#14B8A6]/30 text-sm sm:text-base">
       <GoDotFill />

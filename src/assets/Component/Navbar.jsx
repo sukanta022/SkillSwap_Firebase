@@ -20,7 +20,7 @@ const Navbar = () => {
                 {NavList}
               </ul>
             </div>
-            <a class="btn btn-ghost text-xl gap-2">
+            <a class="btn btn-ghost text-xl gap-2 animate__animated  animate__heartBeat">
               <div className='bg-[#0D9488] text-white p-1 rounded-lg '>
                 <SlEnergy />
               </div>
