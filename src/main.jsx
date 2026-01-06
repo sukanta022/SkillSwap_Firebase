@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import './App.css'
 import { RouterProvider } from "react-router/dom";
-import { router } from './assets/Routes/Routes.jsx';
+import { router } from './Routes/Routes.jsx';
 import 'animate.css';
 
 

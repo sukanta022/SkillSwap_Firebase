@@ -1,7 +1,10 @@
 import React from 'react';
 import { NavLink } from 'react-router';
 import { SlEnergy } from "react-icons/sl";
+import useSkills from '../hooks/useSkills';
 const Navbar = () => {
+  const {skills} = useSkills()
+  console.log(skills)
   const NavList = <>
     <NavLink>Home</NavLink>
     <NavLink>Explore</NavLink>
