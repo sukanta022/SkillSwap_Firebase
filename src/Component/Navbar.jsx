@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router';
+import { Link, NavLink } from 'react-router';
 import { SlEnergy } from "react-icons/sl";
 
 const Navbar = () => {
@@ -34,8 +34,8 @@ const Navbar = () => {
             </ul>
           </div>
           <div class="navbar-end gap-3">
-            <a class="btn rounded-4xl">Log in</a>
-            <a class="btn bg-[#0D9488]/90 rounded-4xl text-white">Sign Up</a>
+            <Link to={'/login'} class="btn rounded-4xl">Log in</Link>
+            <Link to={'/register'} class="btn bg-[#0D9488]/90 rounded-4xl text-white">Sign Up</Link>
           </div>
       </div>
     );
