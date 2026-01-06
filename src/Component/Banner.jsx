@@ -5,7 +5,7 @@ import { Link } from 'react-router';
 const Banner = () => {
     return (
         <div
-  className="w-full h-[420px] sm:h-[480px] lg:h-[600px] bg-center bg-cover flex items-center mb-10"
+  className="w-full h-[420px] sm:h-[480px] lg:h-[600px] bg-center bg-cover flex items-center"
   style={{
     backgroundImage: `
       linear-gradient(to right, #0F172AFF 0%, #0F172ACC 50%, #0F172A00 120%),

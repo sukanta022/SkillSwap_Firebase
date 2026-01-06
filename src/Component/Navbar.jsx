@@ -1,17 +1,15 @@
 import React from 'react';
 import { NavLink } from 'react-router';
 import { SlEnergy } from "react-icons/sl";
-import useSkills from '../hooks/useSkills';
+
 const Navbar = () => {
-  const {skills} = useSkills()
-  console.log(skills)
   const NavList = <>
     <NavLink>Home</NavLink>
     <NavLink>Explore</NavLink>
     <NavLink>Teach</NavLink>
   </>
     return (
-        <div class="navbar backdrop-blur-md bg-white/20 border border-white/30 shadow-md sticky top-0">
+        <div class="navbar backdrop-blur-md bg-white/20 border border-white/30 shadow-md sticky top-0 z-50">
           <div class="navbar-start">
             <div class="dropdown">
               <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
