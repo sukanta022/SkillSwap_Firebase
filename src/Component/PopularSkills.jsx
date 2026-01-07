@@ -6,9 +6,8 @@ import { Link } from 'react-router';
 import { MdArrowForwardIos } from "react-icons/md";
 const PopularSkills = () => {
     const {skills} = useSkills()
-  
     const data = skills.filter(skill => Number(skill.rating)>=4.7)
-    console.log(data.length)
+    
     return (
         <div className='w-11/12 mx-auto py-15'>
             <h1 className='text-3xl mb-3 md:mb-1 text-center md:text-left text-[#001931] font-bold'>Popular Skills</h1>

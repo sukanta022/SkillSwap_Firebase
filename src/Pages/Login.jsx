@@ -8,8 +8,8 @@ const Login = () => {
     const emailRef = useRef()
     const {signInUser} = use(AuthContext)
     const navigate = useNavigate()
+    const location = useLocation()
     
-
     const handleLogin = (e) => {
         e.preventDefault()
         const email = e.target.email.value
@@ -21,7 +21,7 @@ const Login = () => {
         signInUser(email,password)
         .then(() =>{
             setSuccess(true)
-            navigate("/")
+            navigate(`${location.state ? location.state : "/"}`)
         } )
         .catch(error => setError(error.message))
 

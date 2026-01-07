@@ -5,6 +5,7 @@ import SkillDetails from "../Pages/SkillDetails";
 import Skills from "../Pages/Skills";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
+import PrivateRoute from "./PrivateRoute";
 
 export const router = createBrowserRouter([
   {
@@ -17,7 +18,7 @@ export const router = createBrowserRouter([
       },
       {
         path: '/skillDetails/:id',
-        Component: SkillDetails
+        element: <PrivateRoute> <SkillDetails></SkillDetails> </PrivateRoute>
       },
       {
         path: 'skills',
