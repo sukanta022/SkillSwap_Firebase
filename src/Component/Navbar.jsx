@@ -11,7 +11,7 @@ const Navbar = () => {
     
   const NavList = <>
     <NavLink to={"/"}>Home</NavLink>
-    <NavLink to={"/skills"}>Explore</NavLink>
+    <NavLink onClick={() => window.scrollTo(0, 0)} to={"/skills"}>Explore</NavLink>
     {
       user && <NavLink to={"/profile"}>Profile</NavLink>
     }
@@ -33,12 +33,12 @@ const Navbar = () => {
                 {NavList}
               </ul>
             </div>
-            <a class="btn btn-ghost text-xl gap-2 animate__animated  animate__heartBeat">
+            <Link to={"/"} class="btn btn-ghost text-xl gap-2 animate__animated  animate__heartBeat">
               <div className='bg-[#0D9488] text-white p-1 rounded-lg '>
                 <SlEnergy />
               </div>
               SkillSwap
-            </a>
+            </Link>
           </div>
           <div class="navbar-center hidden lg:flex">
             <ul class="menu menu-horizontal px-1 gap-5">

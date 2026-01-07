@@ -3,11 +3,16 @@ import { useParams } from 'react-router';
 import useSkills from '../hooks/useSkills';
 import { FaStar,FaRegUserCircle  } from "react-icons/fa";
 import BookSessionModal from '../Component/BookSessionModal ';
+import ErrorPage from "./ErrorPage";
 const SkillDetails = () => {
     const {id} = useParams()
     const {skills, loading} = useSkills()
     const [openModal, setOpenModal] = useState(false);
     const data = skills.find(skill => skill.skillId == id)
+
+    if(!data){
+        return <ErrorPage></ErrorPage>
+    }
     
     if(loading){
         return <p>Loading...</p>
