@@ -2,7 +2,6 @@ import React from 'react';
 import { FaStar,FaRegUserCircle  } from "react-icons/fa";
 import { Link } from 'react-router';
 const SkillCard = ({skill}) => {
-    console.log(skill)
     const {skillName, providerName, price, rating, description, image, skillId} = skill
     return (
         <div className='w-[350px] shadow-lg rounded-lg scale-90 md:scale-100 hover:scale-105 transition ease-in-out'>

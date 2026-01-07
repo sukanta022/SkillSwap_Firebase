@@ -1,12 +1,13 @@
-import React, {  useRef, useState } from 'react';
+import React, {  use, useRef, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
+import { AuthContext } from '../Provider/AuthContext';
 
 const Login = () => {
     const [error, setError] = useState('')
     const [success, setSuccess] = useState(false)
     const emailRef = useRef()
-
-
+    const {signInUser} = use(AuthContext)
+    const navigate = useNavigate()
     
 
     const handleLogin = (e) => {
@@ -14,10 +15,15 @@ const Login = () => {
         const email = e.target.email.value
         const password = e.target.password.value
         console.log(email,password)
+
         setError('')
         setSuccess(false)
-
-        
+        signInUser(email,password)
+        .then(() =>{
+            setSuccess(true)
+            navigate("/")
+        } )
+        .catch(error => setError(error.message))
 
     }
     return (

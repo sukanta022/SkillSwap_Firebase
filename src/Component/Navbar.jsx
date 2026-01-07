@@ -1,13 +1,20 @@
-import React from 'react';
+import React, { use } from 'react';
 import { Link, NavLink } from 'react-router';
 import { SlEnergy } from "react-icons/sl";
-
+import { AuthContext } from '../Provider/AuthContext';
+import { MdLogout } from "react-icons/md";
+import { FaRegCircleUser } from "react-icons/fa6";
 const Navbar = () => {
+  const {user,signOutUser} = use(AuthContext)
   const NavList = <>
     <NavLink>Home</NavLink>
     <NavLink>Explore</NavLink>
     <NavLink>Teach</NavLink>
   </>
+
+  const handleSignOut = () => {
+    signOutUser()
+  }
     return (
         <div class="navbar backdrop-blur-md bg-white/20 border border-white/30 shadow-md sticky top-0 z-50">
           <div class="navbar-start">
@@ -34,8 +41,16 @@ const Navbar = () => {
             </ul>
           </div>
           <div class="navbar-end gap-3">
-            <Link to={'/login'} class="btn rounded-4xl">Log in</Link>
-            <Link to={'/register'} class="btn bg-[#0D9488]/90 rounded-4xl text-white">Sign Up</Link>
+            {
+              user ? <p className='font-bold text-xl flex items-center border-2 border-[#0D9488] gap-1 rounded-lg p-1'><FaRegCircleUser />
+ {user.displayName}</p> : <Link to={'/login'} class="btn rounded-4xl">Log in</Link>
+            }
+
+            {
+              user ? <button onClick={handleSignOut} className='btn bg-[#0D9488]/90 md:rounded-4xl rounded-full text-white'><span className='md:block hidden'>Log out</span> <MdLogout className='md:hidden block text-xl font-bold'/></button> : <Link to={'/register'} className="btn bg-[#0D9488]/90 rounded-4xl text-white">Sign Up</Link>
+            }
+            
+            
           </div>
       </div>
     );
