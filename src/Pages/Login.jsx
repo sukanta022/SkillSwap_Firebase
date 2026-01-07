@@ -1,15 +1,19 @@
-import React, {  use, useRef, useState } from 'react';
+import React, {  use, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../Provider/AuthContext';
 import { FcGoogle } from "react-icons/fc";
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import toast from 'react-hot-toast';
+import ForgotPasswordModal from '../Component/ForgetPasswordModal';
 
 const Login = () => {
     const [error, setError] = useState('')
     const [success, setSuccess] = useState(false)
     const [showPassword, setShowPassword] = useState(false)
-    const emailRef = useRef()
+     
+    const [email, setEmail] = useState("");
+    const [openForgot, setOpenForgot] = useState(false);
+    
     const {signInUser,signInGoogle} = use(AuthContext)
     const navigate = useNavigate()
     const location = useLocation()
@@ -64,7 +68,7 @@ const Login = () => {
                         <form onSubmit={handleLogin}>
                             <fieldset className="fieldset">
                                 <label className="label">Email</label>
-                                <input type="email" name="email" ref={emailRef} className="input w-full" placeholder="Email" />
+                                <input onChange={(e) => setEmail(e.target.value)} type="email" name="email"  className="input w-full" placeholder="Email" />
                                 <label className="label">Password</label>
                                 <div className='relative'>
                                     <input type={showPassword ? "text" : "password"} name="password" className="input w-full" placeholder="Password" />
@@ -74,7 +78,7 @@ const Login = () => {
                                         }
                                     </button>
                                 </div>
-                                <div ><a className="link link-hover">Forgot password?</a></div>
+                                <div ><a onClick={() => setOpenForgot(true)} className="link link-hover">Forgot password?</a></div>
                                 <button className="btn text-white bg-[#0D9488] mt-4 w-full">Login</button>
                                 
                             </fieldset>
@@ -91,6 +95,11 @@ const Login = () => {
                     
                 </div>
             </div>
+            <ForgotPasswordModal
+        open={openForgot}
+        onClose={() => setOpenForgot(false)}
+        defaultEmail={email}
+      />
         </div>
     );
 };
