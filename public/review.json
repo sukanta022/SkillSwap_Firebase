@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "Jennifer Wu",
+    "expertise": "Piano & Music Theory",
+    "rating": 5.0,
+    "reviews": 42,
+    "testimonial": "Patient and incredibly talented teacher.",
+    "image" : "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "id": 2,
+    "name": "Michael Rodriguez",
+    "expertise": "Guitar & Songwriting",
+    "rating": 4.9,
+    "reviews": 38,
+    "testimonial": "Explains concepts clearly and keeps lessons engaging.",
+    "image" : "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "id": 3,
+    "name": "Sophia Lee",
+    "expertise": "Violin & Classical Music",
+    "rating": 4.8,
+    "reviews": 29,
+    "testimonial": "Very supportive and detail-oriented instructor.",
+    "image" : "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=761&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "id": 4,
+    "name": "Daniel Thompson",
+    "expertise": "Drums & Rhythm Training",
+    "rating": 4.7,
+    "reviews": 34,
+    "testimonial": "Great energy and perfect for beginners.",
+    "image" : "https://plus.unsplash.com/premium_photo-1689568126014-06fea9d5d341?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "id": 5,
+    "name": "Emily Carter",
+    "expertise": "Vocal Training",
+    "rating": 5.0,
+    "reviews": 51,
+    "testimonial": "Helped me gain confidence in my singing voice.",
+    "image" : "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "id": 6,
+    "name": "Arjun Mehta",
+    "expertise": "Music Production & Mixing",
+    "rating": 4.9,
+    "reviews": 27,
+    "testimonial": "Highly knowledgeable and industry-focused.",
+    "image" : "https://media.istockphoto.com/id/1474144111/photo/mature-businessman-standing-with-his-arms-crossed-in-an-office-and-smiling.jpg?s=1024x1024&w=is&k=20&c=YdpBen6HrdNSWQK9JE0zrBO66WyDkyJN5IXDM06muoQ="
+  },
+  {
+    "id": 7,
+    "name": "Laura Kim",
+    "expertise": "Music Theory & Composition",
+    "rating": 4.8,
+    "reviews": 31,
+    "testimonial": "Makes complex theory easy to understand.",
+    "image" : "https://media.istockphoto.com/id/2162714867/photo/close-up-image-of-attractive-redheaded-woman-in-restaurant-setting-wearing-little-black-dress.jpg?s=1024x1024&w=is&k=20&c=2VxItEZ7htABaB1X32vH1S084QLiZR2seaBrHYiMFRc="
+  },
+  {
+    "id": 8,
+    "name": "Chris Anderson",
+    "expertise": "Keyboard & Pop Music",
+    "rating": 4.6,
+    "reviews": 22,
+    "testimonial": "Fun lessons with practical techniques.",
+    "image" : "https://media.istockphoto.com/id/2194078950/photo/profile-picture-of-smiling-confident-arabic-businessman.jpg?s=1024x1024&w=is&k=20&c=_tO3RJxSnpUySXAeme8dyPaBi-plv0tizrtn_a2Pqt8="
+  }
+]
