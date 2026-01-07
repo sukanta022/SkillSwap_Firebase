@@ -49,16 +49,16 @@ const Footer = () => {
                 <div className='lg:w-180 space-y-3'>
                     <h2 className='text-white font-bold text-2xl'>Social Links</h2>
                     <ul className='text-[#A1A1AA] space-y-3 flex flex-col items-center lg:items-start'>
-                        <li className='flex gap-2 text-center'><FiFacebook className='bg-white rounded-full text-black p-1' /><a href='#'>@Hero.IO</a></li>
-                        <li className='flex gap-2'><RiLinkedinFill  className='bg-white rounded-full p-1 text-black' /><a href='#'>@Hero.IO</a></li>
-                        <li className='flex gap-2'><FaXTwitter  className='bg-white rounded-full p-1 text-black' /><a href='#'>@Hero.IO</a></li>
-                        <li className='flex gap-2'><IoMailOutline  className='bg-white rounded-full p-1 text-black' /><a href='#'>support@hero.com</a></li>
+                        <li className='flex gap-2 text-center'><FiFacebook className='bg-white rounded-full text-black p-1' /><a href='#'>@SkillSwap.com</a></li>
+                        <li className='flex gap-2'><RiLinkedinFill  className='bg-white rounded-full p-1 text-black' /><a href='#'>@SkillSwap.com</a></li>
+                        <li className='flex gap-2'><FaXTwitter  className='bg-white rounded-full p-1 text-black' /><a href='#'>@SkillSwap.com</a></li>
+                        <li className='flex gap-2'><IoMailOutline  className='bg-white rounded-full p-1 text-black' /><a href='#'>support@SkillSwap.com</a></li>
                     </ul>
                 </div>
             </div>
 
             <div className='border-t-1 border-[#A1A1AA] p-5'>
-                <p className='text-white text-center'>© 2025 IO — Hero.IO. All rights reserved.</p>
+                <p className='text-white text-center'>© 2026 — SkillSwap.com. All rights reserved.</p>
             </div>
         </div>
     );

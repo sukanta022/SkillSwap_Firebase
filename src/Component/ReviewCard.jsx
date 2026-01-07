@@ -3,7 +3,7 @@ import { IoStar } from "react-icons/io5";
 const ReviewCard = ({data}) => {
     const { name, expertise, rating, reviews, testimonial, image } = data;
     return (
-        <div className="w-full max-w-md bg-white rounded-2xl shadow-md p-5 flex gap-4 items-center hover:shadow-lg transition">
+        <div className="w-full max-w-md bg-white rounded-2xl shadow-md p-5 flex gap-4 items-center hover:shadow-lg transition scale-90 md:scale-100">
       
             <img  src={image} alt={name} className="w-16 h-16 rounded-full object-cover border"/>
 

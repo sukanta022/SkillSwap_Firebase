@@ -20,8 +20,10 @@ const ForgotPasswordModal = ({ open, onClose, defaultEmail }) => {
         forgetPassword(email)
         .then(() => {
             toast.success("Password reset email sent!");
-            onClose();
-            window.open("https://mail.google.com", "_blank");
+            setTimeout(() => {
+        onClose();
+        window.open("https://mail.google.com", "_blank");
+      }, 2000);
         })
         .catch((error) => toast.error(error.message))
     };

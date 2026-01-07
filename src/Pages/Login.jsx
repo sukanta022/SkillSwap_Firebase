@@ -34,6 +34,7 @@ const Login = () => {
         signInUser(email,password)
         .then(() =>{
             setSuccess(true)
+            toast.success("Login successfully")
             navigate(`${location.state ? location.state : "/"}`)
         } )
         .catch(error => setError(error.message))

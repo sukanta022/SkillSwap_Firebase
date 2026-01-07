@@ -6,10 +6,12 @@ import { MdLogout } from "react-icons/md";
 import { FaRegCircleUser } from "react-icons/fa6";
 const Navbar = () => {
   const {user,signOutUser} = use(AuthContext)
+  
+    
+    
   const NavList = <>
     <NavLink to={"/"}>Home</NavLink>
     <NavLink to={"/skills"}>Explore</NavLink>
-    <NavLink>Teach</NavLink>
     {
       user && <NavLink to={"/profile"}>Profile</NavLink>
     }
