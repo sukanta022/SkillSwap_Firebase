@@ -6,6 +6,7 @@ import Skills from "../Pages/Skills";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import PrivateRoute from "./PrivateRoute";
+import Profile from "../Pages/Profile";
 
 export const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ export const router = createBrowserRouter([
       {
         path: 'register',
         Component: Register
+      },
+      {
+        path: 'profile',
+        element: <PrivateRoute> <Profile></Profile> </PrivateRoute>
       }
     ]
   },

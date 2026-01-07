@@ -74,19 +74,19 @@ const Register = () => {
                             <fieldset className="fieldset">
                                 {/* name */}
                                 <label className="label">Enter name</label>
-                                <input type="text" name="name" className="input" placeholder="Your name" />
+                                <input type="text" name="name" className="input w-full" placeholder="Your name" required />
                                 {/* Photo url */}
                                 <label className="label">Enter photo url</label>
-                                <input type="text" name="photo" className="input" placeholder="Photo url" />
+                                <input type="text" name="photo" className="input w-full" placeholder="Photo url" />
                                 <label className="label">Email</label>
                                 {/* password */}
-                                <input type="email" name="email" className="input" placeholder="Email" />
+                                <input type="email" name="email" className="input w-full" placeholder="Email" required/>
                                 <label className="label">Password</label>
                                 {/* password */}
                                 <div className='relative'>
-                                    <input type={showPassword ? "text" : "password"} name="password" className="input" placeholder="Password" />
+                                    <input type={showPassword ? "text" : "password"} name="password" className="input w-full" placeholder="Password" />
 
-                                    <button onClick={handlePasswordFeild} className='text-2xl absolute top-2 right-6'>
+                                    <button onClick={handlePasswordFeild} className='text-2xl absolute top-2 right-2'>
                                         {
                                             showPassword ? <FaEye></FaEye> : <FaEyeSlash></FaEyeSlash>
                                         }
@@ -97,9 +97,9 @@ const Register = () => {
                                     <input type="checkbox" name="terms" class="checkbox" />
                                     Accept terms and conditions
                                 </label>
-                                <button className="btn bg-[#0D9488] mt-4">Register</button>
+                                <button className="btn bg-[#0D9488] mt-4 w-full">Register</button>
                             </fieldset>
-                            <p>Already have an account? Please <Link to={'/EmailPasswordLogin'} className='text-blue-500 underline'>Login</Link></p>
+                            <p>Already have an account? Please <Link to={'/login'} className='text-blue-500 underline'>Login</Link></p>
                         </form>
                     </div>
                     {

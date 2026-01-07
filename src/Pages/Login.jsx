@@ -2,15 +2,22 @@ import React, {  use, useRef, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../Provider/AuthContext';
 import { FcGoogle } from "react-icons/fc";
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import toast from 'react-hot-toast';
 
 const Login = () => {
     const [error, setError] = useState('')
     const [success, setSuccess] = useState(false)
+    const [showPassword, setShowPassword] = useState(false)
     const emailRef = useRef()
     const {signInUser,signInGoogle} = use(AuthContext)
     const navigate = useNavigate()
     const location = useLocation()
+
+    const handlePasswordFeild = (e) => {
+        e.preventDefault()
+        setShowPassword(!showPassword)
+    }
     
     const handleLogin = (e) => {
         e.preventDefault()
@@ -30,12 +37,18 @@ const Login = () => {
     }
 
     const handleGoogleSignIn = () => {
+        setError('')
+        setSuccess(false)
         signInGoogle()
         .then(() => {
+            toast.success("Sign in successfully")
             setSuccess(true)
             navigate(`${location.state ? location.state : "/"}`)
         })
-        .catch((error) => setError(error.message))
+        .catch((error) => {
+            console.log(error)
+            setError(error.message)
+        })
     }
 
 
@@ -53,13 +66,21 @@ const Login = () => {
                                 <label className="label">Email</label>
                                 <input type="email" name="email" ref={emailRef} className="input w-full" placeholder="Email" />
                                 <label className="label">Password</label>
-                                <input type="password" name="password" className="input w-full" placeholder="Password" />
+                                <div className='relative'>
+                                    <input type={showPassword ? "text" : "password"} name="password" className="input w-full" placeholder="Password" />
+                                    <button onClick={handlePasswordFeild} className='text-2xl absolute top-2 right-2'>
+                                        {
+                                            showPassword ? <FaEye></FaEye> : <FaEyeSlash></FaEyeSlash>
+                                        }
+                                    </button>
+                                </div>
                                 <div ><a className="link link-hover">Forgot password?</a></div>
                                 <button className="btn text-white bg-[#0D9488] mt-4 w-full">Login</button>
-                                <button onClick={handleGoogleSignIn} className='btn font-semibold text-white bg-[#001931]'><FcGoogle /> Sign in with Google</button>
+                                
                             </fieldset>
                         </form>
-                        <p>New to our website? Please <Link to={'/EmailPassword'} className='text-blue-500 underline'>Register</Link></p>
+                        <button onClick={handleGoogleSignIn} className='btn font-semibold text-white bg-[#001931]'><FcGoogle /> Sign in with Google</button>
+                        <p>New to our website? Please <Link to={'/register'} className='text-blue-500 underline'>Register</Link></p>
                     </div>
                     {
                         error && <p className='text-red-500 text-center font-semibold'>{error}</p> 

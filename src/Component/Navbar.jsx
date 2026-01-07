@@ -7,9 +7,12 @@ import { FaRegCircleUser } from "react-icons/fa6";
 const Navbar = () => {
   const {user,signOutUser} = use(AuthContext)
   const NavList = <>
-    <NavLink>Home</NavLink>
-    <NavLink>Explore</NavLink>
+    <NavLink to={"/"}>Home</NavLink>
+    <NavLink to={"/skills"}>Explore</NavLink>
     <NavLink>Teach</NavLink>
+    {
+      user && <NavLink to={"/profile"}>Profile</NavLink>
+    }
   </>
 
   const handleSignOut = () => {
