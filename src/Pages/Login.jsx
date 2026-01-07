@@ -1,12 +1,14 @@
 import React, {  use, useRef, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../Provider/AuthContext';
+import { FcGoogle } from "react-icons/fc";
+import toast from 'react-hot-toast';
 
 const Login = () => {
     const [error, setError] = useState('')
     const [success, setSuccess] = useState(false)
     const emailRef = useRef()
-    const {signInUser} = use(AuthContext)
+    const {signInUser,signInGoogle} = use(AuthContext)
     const navigate = useNavigate()
     const location = useLocation()
     
@@ -26,6 +28,17 @@ const Login = () => {
         .catch(error => setError(error.message))
 
     }
+
+    const handleGoogleSignIn = () => {
+        signInGoogle()
+        .then(() => {
+            setSuccess(true)
+            navigate(`${location.state ? location.state : "/"}`)
+        })
+        .catch((error) => setError(error.message))
+    }
+
+
     return (
          <div className="hero bg-base-200 min-h-screen">
             <div className="hero-content flex-col space-y-3 animate__animated animate__fadeIn">
@@ -43,6 +56,7 @@ const Login = () => {
                                 <input type="password" name="password" className="input w-full" placeholder="Password" />
                                 <div ><a className="link link-hover">Forgot password?</a></div>
                                 <button className="btn text-white bg-[#0D9488] mt-4 w-full">Login</button>
+                                <button onClick={handleGoogleSignIn} className='btn font-semibold text-white bg-[#001931]'><FcGoogle /> Sign in with Google</button>
                             </fieldset>
                         </form>
                         <p>New to our website? Please <Link to={'/EmailPassword'} className='text-blue-500 underline'>Register</Link></p>
